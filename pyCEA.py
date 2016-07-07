@@ -113,12 +113,13 @@ def readCEA(T,P,prefix='benchmark'):
         elif line[:21] == ' CALCULATIONS STOPPED':
             break
         else:
-            species.append(vec[0])
-            if '-' in vec[1]:
-                num,exp = vec[1].split('-')
-                moles.append(np.double(num+'e-'+exp))
-            else:
-                moles.append(np.double(vec[1]))
+            if '*' not in vec[1]:
+                species.append(vec[0])
+                if '-' in vec[1]:
+                    num,exp = vec[1].split('-')
+                    moles.append(np.double(num+'e-'+exp))
+                else:
+                    moles.append(np.double(vec[1]))
     f.close()
     return species,moles
 

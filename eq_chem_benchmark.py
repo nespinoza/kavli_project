@@ -33,20 +33,25 @@ only_consider_these =  '\n  e- AL AL2O ALH ALO ALOH ALS\n'+\
                        '  Ni(cr) P(cr) Si(cr) SiC(b)\n'+\
                        '  TiC(cr) TiN(cr) Ti2O3(I)\n'
 
-all_times = np.linspace(0.01,5.,30)
-for t in all_times:
-  t = 1.
-  # Sample the disk coarsely in log:
-  r = 10**(np.linspace(-2,0.1,100))
+# Times to sample:
+all_times = np.linspace(0.01,3.,100)
+
+# Sample the disk coarsely in log:
+r = 10**(np.linspace(-2,0.1,50))
+
+# Extract abundances (note hydrogen is 1e12):
+Z,name,N = pyCEA.read_abundances('ssabundances_4Gyr.dat')
+
+# Chech which elements we are actually going to use:
+idx = pyCEA.check_elements(name,only_consider_these)
+Z = Z[idx]
+name = name[idx]
+N = N[idx]
+
+for m in range(len(all_times)):
+  t = all_times[m]
   # Extract T-P profile and surface density:
   T,P,Sigma = disk_models.ChambersModel(r,t*Myr)
-  # Extract abundances (note hydrogen is 1e12):
-  Z,name,N = pyCEA.read_abundances('ssabundances_4Gyr.dat')
-  # Chech which elements we are actually going to use:
-  idx = pyCEA.check_elements(name,only_consider_these)
-  Z = Z[idx]
-  name = name[idx]
-  N = N[idx]
   # Calculate equilibrium chemistry for each T-P point:
   results = {}
   for i in range(len(T)):
@@ -70,11 +75,17 @@ for t in all_times:
   plt.ylabel('Relative molar abundance')
   plt.xscale('log')
   plt.xlim([0.01,0.4])
-  #plt.ylim([1e-5,1.1])
+  plt.ylim([0.0,1.8e-7])
   print results.keys()
   for species in ['*Ti','*TiO','TiO2','TiN(cr)']:
       plt.plot(r,results[species],\
                       linewidth=3,alpha=0.5,label=species)
-  plt.legend(loc='best')
-  plt.savefig('disk_Ti_'+str(t)+'.png')
+  plt.legend(loc=4)
+  if m<10:
+      plt.savefig('disk_Ti_00'+str(m)+'.png')
+  elif m<100:
+      plt.savefig('disk_Ti_0'+str(m)+'.png')
+  else:
+      plt.savefig('disk_Ti_'+str(m)+'.png')
+  plt.clf()
   #plt.show()         
