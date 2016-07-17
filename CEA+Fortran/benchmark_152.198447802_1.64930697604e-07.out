@@ -1,0 +1,267 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ # problem dataset: disk
+ problem tp ions
+   p(bar) = 1.64930697604e-07
+   t(k) = 152.198447802
+ reac
+   na H moles = 1E+12
+   na He moles = 96827785626.1
+   na C moles = 275422870.334
+   na N moles = 81283051.6164
+   na O moles = 602559586.074
+   na Na moles = 2238721.13857
+   na Mg moles = 39810717.0553
+   na AL moles = 3235936.5693
+   na Si moles = 38904514.4994
+   na P moles = 323593.65693
+   na S moles = 16218100.9736
+   na Ca moles = 2344228.81532
+   na Ti moles = 95499.2586021
+   na Cr moles = 501187.233627
+   na Fe moles = 32359365.693
+   na Ni moles = 1905460.71796
+ only
+   e- AL AL2O ALH ALO ALOH ALS
+   C CH4 CN CO CO2 CP CS
+   Ca CaH CaO CaOH CaS
+   Cr
+   Fe FeO
+   H H2 H2O H2S HCN HCO HPO
+   He
+   Mg MgH MgN MgO MgOH MgS
+   N NH3 NO
+   Na Na2 NaH NaO NaOH
+   Ni NiO NiS
+   O O2
+   P PH PN PO PS
+   S S2 SN SO SO2
+   Si SiC SiH SiN SiO SiS
+   Ti TiO TiO2
+   AL2O3(a)  ALN(cr)
+   C(gr)
+   CaS(cr)
+   Cr(cr)
+   Fe(a) Fe(c) Fe(d)
+   H2O(cr)
+   MgAL2O4(cr) MgS(cr) Mg2SiO4(cr) MgSiO3(I) MgSiO3(II) MgSiO3(III)
+   Ni(cr) P(cr) Si(cr) SiC(b)
+   TiC(cr) TiN(cr) Ti2O3(I)
+ output calories siunits trace 1e-13
+ end
+
+ OPTIONS: TP=T  HP=F  SP=F  TV=F  UV=F  SV=F  DETN=F  SHOCK=F  REFL=F  INCD=F
+ RKT=F  FROZ=F  EQL=F  IONS=T  SIUNIT=T  DEBUGF=F  SHKDBG=F  DETDBG=F  TRNSPT=F
+
+ T,K =   152.1984
+
+ TRACE= 1.00E-13  S/R= 0.000000E+00  H/R= 0.000000E+00  U/R= 0.000000E+00
+
+ P,BAR =     0.000000
+
+    REACTANT           MOLES    (ENERGY/R),K   TEMP,K  DENSITY
+        EXPLODED FORMULA
+  : H              **********   0.000000E+00     0.00  0.0000
+          H  1.00000
+  : He             **********   0.000000E+00     0.00  0.0000
+          HE 1.00000
+  : C              **********   0.000000E+00     0.00  0.0000
+          C  1.00000
+  : N              **********   0.000000E+00     0.00  0.0000
+          N  1.00000
+  : O              **********   0.000000E+00     0.00  0.0000
+          O  1.00000
+  : Na             **********   0.000000E+00     0.00  0.0000
+          NA 1.00000
+  : Mg             **********   0.000000E+00     0.00  0.0000
+          MG 1.00000
+  : AL             **********   0.000000E+00     0.00  0.0000
+          AL 1.00000
+  : Si             **********   0.000000E+00     0.00  0.0000
+          SI 1.00000
+  : P              **********   0.000000E+00     0.00  0.0000
+          P  1.00000
+  : S              **********   0.000000E+00     0.00  0.0000
+          S  1.00000
+  : Ca             **********   0.000000E+00     0.00  0.0000
+          CA 1.00000
+  : Ti             **********   0.000000E+00     0.00  0.0000
+          TI 1.00000
+  : Cr             **********   0.000000E+00     0.00  0.0000
+          CR 1.00000
+  : Fe             **********   0.000000E+00     0.00  0.0000
+          FE 1.00000
+  : Ni             **********   0.000000E+00     0.00  0.0000
+          NI 1.00000
+
+  SPECIES BEING CONSIDERED IN THIS SYSTEM
+ (CONDENSED PHASE MAY HAVE NAME LISTED SEVERAL TIMES)
+  LAST thermo.inp UPDATE:    9/09/04
+
+  g12/98  *e-              g12/97  *AL              tpis96  ALH            
+  tpis96  *ALO             tpis96  ALOH             tpis96  ALS            
+  tpis96  AL2O             g 7/97  *C               g 8/99  CH4            
+  g 8/99  *CN              tpis79  *CO              g 9/99  *CO2           
+  tpis91  CP               g11/01  CS               g 8/97  *Ca            
+  tpis96  CaH              tpis96  *CaO             tpis96  CaOH           
+  tpis96  CaS              g 7/97  *Cr              g 5/97  *Fe            
+  j 9/66  FeO              g 6/97  *H               g 6/01  HCN            
+  g 1/01  HCO              tpis89  HPO              tpis78  *H2            
+  g 8/89  H2O              g 4/01  H2S              g 5/97  *He            
+  g 6/97  *Mg              tpis96  MgH              j 3/64  MgN            
+  tpis96  *MgO             tpis96  MgOH             tpis96  MgS            
+  g 5/97  *N               tpis89  NH3              tpis89  *NO            
+  g 8/97  *Na              tpis82  NaH              tpis82  NaO            
+  g12/96  NaOH             tpis82  Na2              g 8/97  *Ni            
+  g12/00  NiO              j12/76  NiS              g 5/97  *O             
+  tpis89  *O2              g 5/97  *P               tpis89  PH             
+  tpis89  PN               tpis89  PO               tpis89  PS             
+  g 5/97  *S               tpis89  SN               tpis89  SO             
+  tpis89  SO2              tpis89  S2               g 8/97  *Si            
+  tpis91  SiC              tpis91  SiH              g 5/99  SiN            
+  tpis91  SiO              tpis91  SiS              g 7/97  *Ti            
+  tpis89  *TiO             g10/99  TiO2             tpis96  ALN(cr)        
+  tpis96  ALN(cr)          tpis96  AL2O3(a)         tpis96  AL2O3(a)       
+  tpis96  AL2O3(a)         n 4/83  C(gr)            n 4/83  C(gr)          
+  n 4/83  C(gr)            tpis96  CaS(cr)          tpis96  CaS(cr)        
+  j 6/73  Cr(cr)           j 6/73  Cr(cr)           j 6/73  Cr(cr)         
+  j 3/78  Fe(a)            j 3/78  Fe(a)            j 3/78  Fe(a)          
+  j 3/78  Fe(a)            j 3/78  Fe(c)            j 3/78  Fe(d)          
+  g11/99  H2O(cr)          j12/79  MgAL2O4(cr)      j12/79  MgAL2O4(cr)    
+  tpis96  MgS(cr)          tpis96  MgS(cr)          j12/67  MgSiO3(I)      
+  j12/67  MgSiO3(II)       j12/67  MgSiO3(III)      g11/00  Mg2SiO4(cr)    
+  g11/00  Mg2SiO4(cr)      j12/76  Ni(cr)           j12/76  Ni(cr)         
+  j12/76  Ni(cr)           j12/76  Ni(cr)           tpis89  P(cr)          
+  tpis91  Si(cr)           tpis91  Si(cr)           tpis91  SiC(b)         
+  tpis91  SiC(b)           j 6/68  TiC(cr)          j 6/68  TiC(cr)        
+  j 6/68  TiN(cr)          j 6/68  TiN(cr)          tpis82  Ti2O3(I)       
+  tpis82  Ti2O3(I)       
+
+ O/F =   0.000000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG        0.00000000E+00      0.00000000E+00      0.00000000E+00
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *H                   0.70703216E+00      0.10000000E+13      0.70703216E+00
+  *He                  0.68460358E-01      0.96827786E+11      0.68460358E-01
+  *C                   0.19473283E-03      0.27542287E+09      0.19473283E-03
+  *N                   0.57469731E-04      0.81283052E+08      0.57469731E-04
+  *O                   0.42602900E-03      0.60255959E+09      0.42602900E-03
+  *Na                  0.15828478E-05      0.22387211E+07      0.15828478E-05
+  *Mg                  0.28147457E-04      0.39810717E+08      0.28147457E-04
+  *AL                  0.22879112E-05      0.32359366E+07      0.22879112E-05
+  *Si                  0.27506743E-04      0.38904514E+08      0.27506743E-04
+  *P                   0.22879112E-06      0.32359366E+06      0.22879112E-06
+  *S                   0.11466719E-04      0.16218101E+08      0.11466719E-04
+  *Ca                  0.16574452E-05      0.23442288E+07      0.16574452E-05
+  *Ti                  0.67521047E-07      0.95499259E+05      0.67521047E-07
+  *Cr                  0.35435549E-06      0.50118723E+06      0.35435549E-06
+  *Fe                  0.22879112E-04      0.32359366E+08      0.22879112E-04
+  *Ni                  0.13472220E-05      0.19054607E+07      0.13472220E-05
+  *e-                  0.00000000E+00      0.00000000E+00      0.00000000E+00
+
+ POINT ITN      T            H           HE          C           N 
+                    O           NA          MG          AL          SI
+                    P           S           CA          TI          CR
+                    FE          NI          E 
+   1   33     152.198     -16.242     -33.325     -40.878     -36.469
+                -205.120      13.208      61.985      12.838      74.845
+                 103.090     -43.603      26.099     104.883     262.811
+                 280.306     266.291    -105.888
+ ADD  Mg2SiO4(cr)    
+
+ SINGULAR MATRIX, ITERATION  0  VARIABLE 17(EQLBRM)
+   1   15     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.158      13.246    -493.999      12.869      73.286
+                 101.532     -42.045      26.137     104.960     262.812
+                 280.306     264.734     -85.124
+ ADD  AL2O3(a)       
+   1    4     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.162      13.250    -493.993    -358.514      73.290
+                 101.536     -42.049      26.141     104.968     262.812
+                 280.306     264.737     -85.124
+ ADD  Ti2O3(I)       
+   1    3     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.162      13.250    -493.993    -358.514      73.290
+                 101.536     -42.049      26.141    -298.896     262.812
+                 280.306     264.737     -85.124
+ ADD  Cr(cr)         
+   1    3     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.162      13.250    -493.993    -358.514      73.290
+                 101.536     -42.049      26.141    -298.896      -3.593
+                 280.306     264.737     -85.124
+ ADD  CaS(cr)        
+   1    5     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.162      13.250    -494.183    -358.515      73.670
+                 102.099     -42.612    -341.107    -298.896      -3.593
+                 280.306     265.300     -85.124
+ ADD  Fe(a)          
+   1    4     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.162      13.250    -494.183    -358.515      73.670
+                 102.098     -42.611    -341.107    -298.896      -3.593
+                  -4.089     265.300     -85.124
+ ADD  Ni(cr)         
+   1    5     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.158      13.247    -494.040    -358.520      73.369
+                 101.647     -42.160    -341.559    -298.902      -3.593
+                  -4.089      -4.422     -85.124
+ ADD  Si(cr)         
+   1    9     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.148      13.236    -455.941    -358.536      -2.871
+                  95.509     -36.022    -347.696    -298.918      -3.593
+                  -4.089      -4.422     -85.124
+ ADD  MgSiO3(I)      
+   1    6     152.198     -16.242     -33.325     -40.880     -36.471
+                -365.471      27.821    -135.295    -118.051      -2.871
+                  95.510     -36.023    -347.695     -58.433      -3.593
+                  -4.089      -4.422      -0.000
+ REMOVE  Mg2SiO4(cr)    
+
+ SINGULAR MATRIX, ITERATION  0  VARIABLE 13(EQLBRM)
+   1   14     152.198     -16.242     -33.325     -40.878     -36.470
+                -205.228      13.365    -616.023    -358.416      -2.871
+                  97.347     -36.022    -347.696    -298.797      -3.593
+                  -4.089      -4.422       0.000
+ REMOVE  Si(cr)         
+
+ SINGULAR MATRIX, ITERATION  0  VARIABLE  9(EQLBRM)
+
+ SINGULAR MATRIX, ITERATION  1  VARIABLE 16(EQLBRM)
+
+ WARNING!! POINT  1 USES A REDUCED SET OF COMPONENTS
+ SPECIES CONTAINING THE ELIMINATED COMPONENT ARE OMITTED.
+ IT MAY BE NECESSARY TO RERUN WITH INSERTED CONDENSED SPECIES
+ CONTAINING COMPONENT       SI(EQLBRM)
+
+ POINT ITN      T          *H2         *He         CH4         NH3         
+                  H2O         NaOH        *Mg         *AL         *Ni         
+                  PS          H2S         *Ca         *Ti         *Cr         
+                  *Fe         *Si         
+   1    5     152.198     -32.484     -33.325    -105.847     -85.196
+                -237.712    -208.154    -618.894    -358.416      -4.422
+                  59.489     -68.507    -347.696    -298.797      -3.593
+                  -4.089     -85.124
+ ADD  SiC(b)         
+   1    4     152.198     -32.484     -33.325    -125.376     -85.197
+                -237.713    -208.154    -618.891    -358.414      -4.422
+                  59.486     -68.507    -347.695    -298.796      -3.593
+                  -4.089     -85.124
+ ADD  Si(cr)         
+
+ SINGULAR MATRIX, ITERATION  0  VARIABLE 16(EQLBRM)
+
+ CALCULATIONS STOPPED AFTER POINT  0(EQLBRM)
+
+
+

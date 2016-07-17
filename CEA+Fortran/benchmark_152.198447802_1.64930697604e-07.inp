@@ -1,0 +1,49 @@
+# problem dataset: disk
+problem tp ions
+  p(bar) = 1.64930697604e-07
+  t(k) = 152.198447802
+reac
+  na H moles = 1E+12
+  na He moles = 96827785626.1
+  na C moles = 275422870.334
+  na N moles = 81283051.6164
+  na O moles = 602559586.074
+  na Na moles = 2238721.13857
+  na Mg moles = 39810717.0553
+  na AL moles = 3235936.5693
+  na Si moles = 38904514.4994
+  na P moles = 323593.65693
+  na S moles = 16218100.9736
+  na Ca moles = 2344228.81532
+  na Ti moles = 95499.2586021
+  na Cr moles = 501187.233627
+  na Fe moles = 32359365.693
+  na Ni moles = 1905460.71796
+only 
+  e- AL AL2O ALH ALO ALOH ALS
+  C CH4 CN CO CO2 CP CS
+  Ca CaH CaO CaOH CaS
+  Cr
+  Fe FeO
+  H H2 H2O H2S HCN HCO HPO
+  He
+  Mg MgH MgN MgO MgOH MgS
+  N NH3 NO
+  Na Na2 NaH NaO NaOH
+  Ni NiO NiS
+  O O2
+  P PH PN PO PS
+  S S2 SN SO SO2
+  Si SiC SiH SiN SiO SiS
+  Ti TiO TiO2
+  AL2O3(a)  ALN(cr)
+  C(gr)
+  CaS(cr)
+  Cr(cr)
+  Fe(a) Fe(c) Fe(d)
+  H2O(cr)
+  MgAL2O4(cr) MgS(cr) Mg2SiO4(cr) MgSiO3(I) MgSiO3(II) MgSiO3(III)
+  Ni(cr) P(cr) Si(cr) SiC(b)
+  TiC(cr) TiN(cr) Ti2O3(I)
+output calories siunits trace 1e-13
+end
