@@ -110,7 +110,7 @@ def modelCpR(T,params):
                params[5]*(T**3)+\
                params[6]*(T**4)
 
-def modelCpR_PT(T,params,T_transition,idx1 = None, idx2 = None):
+def modelCpR_PT(T,params,T_transition,idx1 = None, idx2 = None, model = '7+constant'):
     if idx1 is None:
        idx1 = np.where(T<=T_transition)[0]
        idx2 = np.where(T>T_transition)[0]
@@ -124,7 +124,10 @@ def modelCpR_PT(T,params,T_transition,idx1 = None, idx2 = None):
                params['a5_1'].value*(T[idx1]**2)+\
                params['a6_1'].value*(T[idx1]**3)+\
                params['a7_1'].value*(T[idx1]**4)
-        result[idx2] = result[idx2]*params['a0'].value
+        if model == '7+constant':
+            result[idx2] = result[idx2]*params['a0'].value
+        elif model == '7+linear':
+            result[idx2] = params['b0'].value*T[idx2] + params['a0'].value
     else:
         result[idx1] = (params[0]/T[idx1]**2)+\
                (params[1]/T[idx1])+\
@@ -133,8 +136,10 @@ def modelCpR_PT(T,params,T_transition,idx1 = None, idx2 = None):
                params[4]*(T[idx1]**2)+\
                params[5]*(T[idx1]**3)+\
                params[6]*(T[idx1]**4)
-
-        result[idx2] = result[idx2]*params[9]
+        if model == '7+constant':
+            result[idx2] = result[idx2]*params[9]
+        elif model == '7+linear':
+            result[idx2] = params[10]*T[idx2] + params[9]
     return result
 
 def modelHR(T,params):
@@ -157,7 +162,7 @@ def modelHR(T,params):
            (params[6]/5.)*(T**5)+\
            params[7]
 
-def modelHR_PT(T,params,T_transition,idx1 = None, idx2 = None):
+def modelHR_PT(T,params,T_transition,idx1 = None, idx2 = None, model = '7+constant'):
     if idx1 is None:
        idx1 = np.where(T<=T_transition)[0]
        idx2 = np.where(T>T_transition)[0]
@@ -172,7 +177,11 @@ def modelHR_PT(T,params,T_transition,idx1 = None, idx2 = None):
            (params['a6_1'].value/4.)*(T[idx1]**4)+\
            (params['a7_1'].value/5.)*(T[idx1]**5)+\
            params['b1_1'].value
-        result[idx2] = params['a0'].value*T[idx2] + params['b1_2'].value
+        if model == '7+constant':
+            result[idx2] = params['a0'].value*T[idx2] + params['b1_2'].value
+        elif model == '7+linear':
+            result[idx2] = params['a0'].value*T[idx2] + params['b0'].value*(T[idx2]**2)/2. + \
+                           params['b1_2'].value
     else:
         result[idx1] =  -(params[0]/T[idx1])+\
            (params[1]*np.log(T[idx1]))+\
@@ -182,7 +191,10 @@ def modelHR_PT(T,params,T_transition,idx1 = None, idx2 = None):
            (params[5]/4.)*(T[idx1]**4)+\
            (params[6]/5.)*(T[idx1]**5)+\
            params[7]
-        result[idx2] = params[9]*T[idx2] + params[10]
+        if model == '7+constant':
+            result[idx2] = params[9]*T[idx2] + params[10]
+        elif model == '7+linear':
+            result[idx2] = params[9]*T[idx2] + params[10]*(T[idx2]**2)/2. + params[11]
     return result
 
 def modelSR(T,params):
@@ -206,7 +218,7 @@ def modelSR(T,params):
            (params[6]/4.)*(T**4)+\
            params[8]
 
-def modelSR_PT(T,params,T_transition,idx1 = None, idx2 = None):
+def modelSR_PT(T,params,T_transition,idx1 = None, idx2 = None, model = '7+constant'):
     if idx1 is None:
        idx1 = np.where(T<=T_transition)[0]
        idx2 = np.where(T>T_transition)[0]
@@ -221,7 +233,11 @@ def modelSR_PT(T,params,T_transition,idx1 = None, idx2 = None):
            (params['a6_1'].value/3.)*(T[idx1]**3)+\
            (params['a7_1'].value/4.)*(T[idx1]**4)+\
            params['b2_1'].value
-        result[idx2] = params['a0'].value*np.log(T[idx2]) + params['b2_2'].value
+        if model == '7+constant':
+            result[idx2] = params['a0'].value*np.log(T[idx2]) + params['b2_2'].value
+        elif model == '7+linear':
+            result[idx2] = params['a0'].value*np.log(T[idx2]) + params['b0'].value*T[idx2]+\
+                           params['b2_2'].value
 
     else:
         result[idx1] = -(params[0]/(2.*T[idx1]**2))-\
@@ -232,9 +248,12 @@ def modelSR_PT(T,params,T_transition,idx1 = None, idx2 = None):
            (params[5]/3.)*(T[idx1]**3)+\
            (params[6]/4.)*(T[idx1]**4)+\
            params[8]
-        result[idx2] = params[9]*np.log(T[idx2]) + params[11]
-
+        if model == '7+constant':
+            result[idx2] = params[9]*np.log(T[idx2]) + params[11]
+        elif model == '7+linear':
+            result[idx2] = params[9]*np.log(T[idx2]) + params[10]*T[idx2] + params[12]
     return result
+
 def get_coeffs(T, Cp, H, S, Tr, Cpr, Hr, Sr):
     """
     This function fits simultaneously Cp/R, H/R 
@@ -353,7 +372,7 @@ def get_coeffs(T, Cp, H, S, Tr, Cpr, Hr, Sr):
         print 'Fit failed. Too bad :(.'
         return result,0,0,0,0,0,0,0,0,0
 
-def get_coeffs_phase_transition(T, Cp, H, S, Tr, Cpr, Hr, Sr,T_transition):
+def get_coeffs_phase_transition(T, Cp, H, S, Tr, Cpr, Hr, Sr, T_transition, model = '7+constant'):
     """
     This function fits simultaneously Cp/R, H/R 
     and S/R given a temperature T, specific heat Cp, 
@@ -416,9 +435,9 @@ def get_coeffs_phase_transition(T, Cp, H, S, Tr, Cpr, Hr, Sr,T_transition):
     Ndata2 = len(idx2)
 
     def residuals(params, X, Y):
-        return np.sqrt((Y[:,0] - modelCpR_PT(X,params,T_transition,idx1=idx1,idx2=idx2))**2 + \
-                       (Y[:,1] - modelHR_PT(X,params,T_transition,idx1=idx1,idx2=idx2))**2 + \
-                       (Y[:,2] - modelSR_PT(X,params,T_transition,idx1=idx1,idx2=idx2))**2)
+        return np.sqrt((Y[:,0] - modelCpR_PT(X,params,T_transition,idx1=idx1,idx2=idx2, model = model))**2 + \
+                       (Y[:,1] - modelHR_PT(X,params,T_transition,idx1=idx1,idx2=idx2, model = model))**2 + \
+                       (Y[:,2] - modelSR_PT(X,params,T_transition,idx1=idx1,idx2=idx2, model = model))**2)
 
     # Initialize the fit. For this, fit Cp via common 
     # least-squares to get a1,a2,...,a7 at each side of the 
@@ -435,11 +454,19 @@ def get_coeffs_phase_transition(T, Cp, H, S, Tr, Cpr, Hr, Sr,T_transition):
     ga1_1,ga2_1,ga3_1,ga4_1,ga5_1,ga6_1,ga7_1 = np.dot(np.dot(np.linalg.inv(np.dot(X.transpose(),X)),\
                                                 X.transpose()),Cp[idx1]/R)
 
-    X = np.ones([Ndata2,2])
-    X[:,0] = np.log(T[idx2])
+    if model == '7+constant':
+        X = np.ones([Ndata2,2])
+        X[:,0] = np.log(T[idx2])
 
-    ga0,b2_2 = np.dot(np.dot(np.linalg.inv(np.dot(X.transpose(),X)),\
-                      X.transpose()),S[idx2]/R)
+        ga0,b2_2 = np.dot(np.dot(np.linalg.inv(np.dot(X.transpose(),X)),\
+                          X.transpose()),S[idx2]/R)
+    elif model == '7+linear':
+        X = np.ones([Ndata2,3])
+        X[:,0] = np.log(T[idx2])
+        X[:,1] = T[idx2]
+
+        ga0,gb0,b2_2 = np.dot(np.dot(np.linalg.inv(np.dot(X.transpose(),X)),\
+                          X.transpose()),S[idx2]/R)
 
     # Init lmfit, left side:
     prms = lmfit.Parameters()
@@ -473,14 +500,23 @@ def get_coeffs_phase_transition(T, Cp, H, S, Tr, Cpr, Hr, Sr,T_transition):
     prms.add('a0',value = ga0)
     prms.add('b2_2',value = b2_2)
 
-    # Constrain fit to have zero difference in Gibbs free energy at the transition point:
-    prms.add('b1_2',expr='-a1_1/(2*'+str(T_transition)+') + a2_1*(log('+str(T_transition)+')+1) + '+\
+    if model == '7+constant':
+        # Constrain fit to have zero difference in Gibbs free energy at the transition point:
+        prms.add('b1_2',expr='-a1_1/(2*'+str(T_transition)+') + a2_1*(log('+str(T_transition)+')+1) + '+\
                          'a3_1*('+str(T_transition)+'-log('+str(T_transition)+')*'+str(T_transition)+')'+\
                          '-(a4_1/2.)*'+str(T_transition)+'**2-(a5_1/6.)*'+str(T_transition)+'**3 - '+\
                          '(a6_1/12.)*'+str(T_transition)+'**4 - (a7_1/20.)*'+str(T_transition)+'**5 + b1_1 '+\
                          '- b2_1*'+str(T_transition)+'-a0*('+str(T_transition)+'-'+str(T_transition)+'*log('+\
                          str(T_transition)+'))+'+str(T_transition)+'*b2_2')
-
+    elif model == '7+linear':
+        prms.add('b0',value = gb0)
+        # Constrain fit to have zero difference in Gibbs free energy at the transition point:
+        prms.add('b1_2',expr='-a1_1/(2*'+str(T_transition)+') + a2_1*(log('+str(T_transition)+')+1) + '+\
+                         'a3_1*('+str(T_transition)+'-log('+str(T_transition)+')*'+str(T_transition)+')'+\
+                         '-(a4_1/2.)*'+str(T_transition)+'**2-(a5_1/6.)*'+str(T_transition)+'**3 - '+\
+                         '(a6_1/12.)*'+str(T_transition)+'**4 - (a7_1/20.)*'+str(T_transition)+'**5 + b1_1 '+\
+                         '- b2_1*'+str(T_transition)+'-a0*('+str(T_transition)+'-'+str(T_transition)+'*log('+\
+                         str(T_transition)+'))+'+str(T_transition)+'*b2_2 + b0*('+str(T_transition)+'**2/2.)')
     # Prepare data:
     Y = np.zeros([Ndata1+Ndata2,3])
     Y[:,0] = Cp/R
@@ -492,12 +528,20 @@ def get_coeffs_phase_transition(T, Cp, H, S, Tr, Cpr, Hr, Sr,T_transition):
 
     # If fit is successful, return fitted values. If not, cry:
     if result.success:
-        return result, result.params['a1_1'].value, result.params['a2_1'].value, \
+        if model == '7+constant':
+            return result, result.params['a1_1'].value, result.params['a2_1'].value, \
                result.params['a3_1'].value, result.params['a4_1'].value, \
                result.params['a5_1'].value, result.params['a6_1'].value,\
                result.params['a7_1'].value, result.params['b1_1'].value,\
                result.params['b2_1'].value, result.params['a0'].value,\
-               result.params['b1_2'].value, result.params['b1_2'].value
+               result.params['b1_2'].value, result.params['b2_2'].value
+        elif model == '7+linear':
+            return result, result.params['a1_1'].value, result.params['a2_1'].value, \
+               result.params['a3_1'].value, result.params['a4_1'].value, \
+               result.params['a5_1'].value, result.params['a6_1'].value,\
+               result.params['a7_1'].value, result.params['b1_1'].value,\
+               result.params['b2_1'].value, result.params['a0'].value,\
+               result.params['b0'].value, result.params['b1_2'].value, result.params['b2_2'].value
     else:
         print 'Fit failed. Too bad :(.'
         return result,0,0,0,0,0,0,0,0,0
