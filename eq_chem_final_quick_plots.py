@@ -77,12 +77,10 @@ def erase_from_list(sp,long_string):
     return out_string
 
 # Times to sample:
-all_times = np.linspace(0.01,10.,100)
-#all_times = np.linspace(0.01,10.,100)
+all_times = [10.0]#np.linspace(0.01,3.,100)
 
 # Sample the disk coarsely in log:
-#r = 10**(np.linspace(-2,-0.8,500))
-r = 10**(np.linspace(-2,-0.8,100))
+r = 10**(np.linspace(-2,-0.8,500))
 
 # Extract abundances (note hydrogen is 1e12):
 Zo,nameo,No = pyCEA.read_abundances('ssabundances_4Gyr.dat')
@@ -92,10 +90,10 @@ idx = pyCEA.check_elements(nameo,only_consider_these)
 Z = Zo[idx]
 name = nameo[idx]
 N = No[idx]
-all_results = {}
-all_results['r'] = r
+
+element_to_plot = 'AL'
+print 'Initial molar fraction:',N[np.where(name==element_to_plot)[0]]/np.sum(N)
 for m in range(len(all_times)):
-  print 'Time stamp ',m,' of ',len(all_times),'...'
   non_zero_species = []
   t = all_times[m]
   # Extract T-P profile and surface density:
@@ -105,12 +103,17 @@ for m in range(len(all_times)):
   results = {}
   only_consider_these_now = only_consider_these
   for i in range(len(T)):
-      pyCEA.calcCEA(T[i],P[i],name,N,only_consider_these_now,prefix='final')
-      c_species,c_moles = pyCEA.readCEA(T[i],P[i],prefix='final')
+      pyCEA.calcCEA(T[i],P[i],name,N,only_consider_these_now,prefix='benchmark')
+      c_species,c_moles = pyCEA.readCEA(T[i],P[i],prefix='benchmark')
       if i == 0:
           for j in range(len(c_species)):
               results[c_species[j]] = np.zeros(len(r))
               results[c_species[j]][i] = c_moles[j]
+              if c_moles[j]>0. and ('(a)' in c_species[j] or '(b)' in c_species[j]\
+                              or '(c)' in c_species[j] or '(I)' in c_species[j] or\
+                              "(I')" in c_species[j] or "(cr)" in c_species[j]):
+                  # Catch all non-zero species:    
+                  non_zero_species.append(c_species[j])
       else:
           for j in range(len(c_species)):
               if c_species[j] in results.keys():
@@ -118,11 +121,56 @@ for m in range(len(all_times)):
               else:
                   results[c_species[j]] = np.zeros(len(r))
                   results[c_species[j]][i] = c_moles[j]
-  all_results[t] = results
-
-FILE = open('results.pkl','w')
-import pickle
-pickle.dump(all_results, FILE)
-FILE.close()
-#  plt.legend(loc=4)
-#  plt.show()
+                  if c_moles[j]>0. and ('(a)' in c_species[j] or '(b)' in c_species[j]\
+                              or '(c)' in c_species[j] or '(I)' in c_species[j] or\
+                              "(I')" in c_species[j] or  "(cr)" in c_species[j]):
+                      non_zero_species.append(c_species[j])
+              # Check if non-zero species disappeared. If they did,
+              # take them out of the non_zero species...
+              #for sp in non_zero_species:
+              #    if sp not in c_species:
+              #        print sp,'disappeared at ',T[i],'. Erasing it...'
+                      #print only_consider_these_now
+              #        only_consider_these_now = erase_from_list(sp,only_consider_these_now)
+                      #print 'After:'
+                      #print only_consider_these_now
+              #        non_zero_species.remove(sp)
+                  
+  plt.style.use('ggplot')
+  plt.title('{0:2.2} Myr Disk'.format(t),y=1.08)
+  plt.xlabel('Radius (AU)')
+  plt.ylabel('Relative molar abundance')
+  plt.xscale('log')
+  plt.xlim([0.01,0.2])
+  #plt.ylim([0.0,1.8e-7])
+  plot_species = []
+  print 'Final species:'
+  print results.keys()
+  totsum = 0.
+  for res in results.keys():
+      totsum = totsum + results[res]
+  for spec in results.keys():
+      if element_to_plot in spec:
+          plot_species.append(spec)
+  print 'Species to be plotted:'
+  print plot_species
+  tot = 0.0
+  for species in plot_species:
+      factor = species.split(element_to_plot)[1]
+      if factor.isdigit():
+          factor = np.double(factor)
+      else:
+          factor = 1.0
+      tot = tot + factor*results[species]
+      if '(' in species:
+          plt.plot(r,results[species],linewidth=3,alpha=0.5,label=species)
+      else:
+          plt.plot(r,results[species],'--',linewidth=3,alpha=0.5,label=species)
+  #plt.plot(r,tot,'--')
+  #print 'Original Ti abundance:',N[idx1]/np.sum(N)
+  #print 'Measured Ti abundance:',tot
+  #print 'totsum',totsum
+  #plt.plot(r,(np.ones(len(r))*N[idx1])/np.sum(N),'--',label = 'Original abundance of Ti')
+  #plt.plot(r,np.ones(len(r))*(tot/totsum),'--',linewidth=3,alpha=0.3,label = 'Measured abundance of Ti')
+  plt.legend(loc=4)
+  plt.show()
