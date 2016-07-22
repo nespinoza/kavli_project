@@ -5,18 +5,7 @@ import numpy as np
 import utils
 import pickle
 
-def get_data():
-    results = pickle.load(open('results.pkl','r'))
-    # Extract data in user-friendly format:
-    radius = results['r']
-    times = results.keys()
-    times.remove('r')
-    times = np.array(times)
-    idx = np.argsort(times)
-    times = times[idx]
-    return radius,times,results
-
-radius,times,results = get_data()
+radius,times,results = utils.get_data()
 Z,name,N = utils.read_abundances('ssabundances_4Gyr.dat')
 abundances = {}
 for i in range(len(name)):
@@ -24,8 +13,8 @@ for i in range(len(name)):
 Habundance = abundances['H']
 for i in range(len(name)):
     abundances[name[i]] = abundances[name[i]]/Habundance
-element1 = 'Fe'
-element2 = 'O'
+element1 = 'Na'
+element2 = 'K'
 print 'Initial ratio:',abundances[element1]/abundances[element2]
 psolar = abundances[element1]/abundances[element2]
 idx_time = 0.5
@@ -70,6 +59,7 @@ for i in range(len(times)):
     idx_solid = np.where(solids_element2 != 0.0)[0]
     solid_ratio = solids_element1[idx_solid]/solids_element2[idx_solid]
     if t > idx_time:
+        print gas_ratio/psolar
         plt.plot(radius[idx_gas],gas_ratio/psolar,'--',label = str(t)+' Myr disk (gas)')
         plt.plot(radius[idx_solid],solid_ratio/psolar,'-',label = str(t)+' Myr disk (solid)')
         idx_time = idx_time + 2.0

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from scipy import interpolate
+import pickle
 import numpy as np
 
 def get_accretion_data(filename):
@@ -51,6 +54,41 @@ def read_abundances(filename):
             break
     f.close()
     return Z,name,10**(logN)
+
+def checkelement(element, species):
+    if element == 'I':
+        return False
+    idx = species.find(element)
+    if idx != -1:
+        l = len(element)
+        ls = len(species)
+        if l == ls:
+            return True
+        else:
+            s = species[idx:]
+            if len(s) == l:
+                return True
+            if element == 'CL' or element == 'AL':
+                if s[2].isdigit():
+                    return True
+                elif s[2].lower() == s[2]:
+                    if len(s) == 3:
+                        return False
+                    else:
+                        return checkelement(element,s[3:])
+                else:
+                    return True
+            else:
+                if s[l].upper() == s[l]:
+                    if element == 'C' and s == 'CL':
+                        return False
+                    else: 
+                        return True
+                else:
+                    return checkelement(element,s[l:])
+
+    else:
+        return False
 
 def howmany(element,species):
     """
@@ -120,3 +158,34 @@ def read_abundances(filename):
             break
     f.close()
     return Z,name,10**(logN)
+
+def get_data():
+    results = pickle.load(open('results.pkl','r'))
+    # Extract data in user-friendly format:
+    radius = results['r']
+    times = results.keys()
+    times.remove('r')
+    times = np.array(times)
+    idx = np.argsort(times)
+    times = times[idx]
+    # Post-processing in case of nans and zeros on all species
+    # (i.e., failed calculations from CEA):
+    for i in range(len(times)):
+        abundances = results[times[i]]
+        # First check for nans and sum abundances at the 
+        # same time (if zero in all abundances, it means 
+        # calculations failed for CEA):
+        tot = 0.0
+        for species in abundances.keys():
+            idx = np.isnan(abundances[species])
+            if len(idx) != len(abundances[species]):
+                f = interpolate.interp1d(radius[~idx], abundances[species][~idx])
+                abundances[species][idx] = f(radius[idx])
+            tot = tot + abundances[species]
+        idx = np.where(tot == 0.0)[0]
+        if len(idx)>0:
+            idx_non_zero = np.where(tot != 0.0)[0]
+            for species in abundances.keys():
+                f = interpolate.interp1d(radius[idx_non_zero], abundances[species][idx_non_zero])
+                abundances[species][idx] = f(radius[idx])
+    return radius,times,results
