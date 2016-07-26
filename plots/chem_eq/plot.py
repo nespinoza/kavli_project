@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from pyx import *
+import os
 from scipy import interpolate
 import disk_models
 import utils
@@ -113,7 +114,8 @@ def get_color(teff,i,half_val,m,n):
     return color.cmyk(c_color,m_color,y_color,k_color)
 
 from pyx import text as pyx_text
-def draw_text(g, x_coord, y_coord, text_input, text_size = -2, color = None):
+from pyx import trafo
+def draw_text(g, x_coord, y_coord, text_input, text_size = -2, color = None, rotation = 0.):
     """
     Function that draws text in a given plot
     INPUTS:
@@ -129,7 +131,7 @@ def draw_text(g, x_coord, y_coord, text_input, text_size = -2, color = None):
     """
 
     # First define the text attributes:
-    textattrs = [pyx_text.size(text_size),pyx_text.halign.center, pyx_text.vshift.middlezero]
+    textattrs = [pyx_text.size(text_size),pyx_text.halign.center, pyx_text.vshift.middlezero, trafo.rotate(rotation)]
 
     # Now convert plot positions to pyx's:
     x0,y0 = g.pos(x_coord, y_coord)
@@ -165,15 +167,16 @@ legend_pos = 'tl'
 xaxis = r'Radius (AU)'
 yaxis = r'Molar abundance'
 
-element_to_plot = 'Na'
+element_to_plot = 'Ti'
 counter = 0
 min_val = 400.
 max_val = 4200.
 half_val = min_val + ((max_val - min_val)/2.)
 m = 1./(max_val-min_val)
 n = -min_val*m
+os.mkdir(element_to_plot+'_images')
 for i in range(len(times)):
-    i = len(times) - 5
+    occupied = []
     c = canvas.canvas()
     if counter == 0:
         counter = 1
@@ -213,8 +216,24 @@ for i in range(len(times)):
     emulate_colorbar_vertical(g,[min_val,max_val],half_val,m,n)
 
     draw_text(g, radii[int(len(radii)/2.)], max_y + max_y*0.1, '{0: 2.2f} Myr disk'.format(times[i]), text_size = 2)
+    #idx = -40
+    idx = -10
     for species in molar_fractions.keys():
         if utils.checkelement(element_to_plot,species) and np.max(molar_fractions[species]) > 0.01*max_y:
+            for occ in occupied:
+                if np.abs(molar_fractions[species][idx]-occ)<0.15*max_y:
+                    idx = idx-15
+                    break
+            slope = (molar_fractions[species][idx]-molar_fractions[species][idx-1])/(np.log10(radii[idx])-np.log10(radii[idx-1]))
+            angle = (np.tan(slope)*180./np.pi)
+            if molar_fractions[species][idx]>0.8*max_y:
+                x_text = radii[idx]
+                y_text = molar_fractions[species][idx] - 0.1*max_y
+                occupied.append(y_text)
+            else:
+                x_text = radii[idx]
+                y_text = molar_fractions[species][idx] + 0.1*max_y
+                occupied.append(y_text)
             if '(cr)' in species or '(a)' in species or '(b)' in species or\
                         '(c)' in species or '(I' in species:
                 g.plot(graph.data.values(x=radii, y=molar_fractions[species], title = None),\
@@ -223,22 +242,26 @@ for i in range(len(times)):
                                          style.linewidth.thin])])
 
                 if '(cr)' in species or '(c)' in species:
-                    draw_text(g, radii[-30], molar_fractions[species][-10]*(1-0.1), species.split('(')[0]+'(s)', text_size = -2,color=color.cmyk.White)
+                    draw_text(g, x_text, y_text, species.split('(')[0]+'(s)', text_size = -3, \
+                              color=color.cmyk.White, rotation = angle)
                 else:
-                    draw_text(g, radii[-30], molar_fractions[species][-10]*(1-0.1), species, text_size = -2,color=color.cmyk.White)
+                    draw_text(g, x_text, y_text, species, text_size = -3,color=color.cmyk.White,\
+                              rotation = angle)
             else:
                 g.plot(graph.data.values(x=radii, y=molar_fractions[species], title = None),\
                                          styles = [graph.style.line([color.cmyk.White,\
                                          style.linestyle.dashed,\
                                          style.linewidth.thin])])
                 if '*' in species:
-                    draw_text(g, radii[-30], molar_fractions[species][-10]*(1-0.1), species.split('*')[0], text_size = -2, color=color.cmyk.White)
+                    draw_text(g, x_text, y_text, species.split('*')[1], text_size = -3, \
+                              color=color.cmyk.White, rotation = angle)
                 else:
-                    draw_text(g, radii[-30], molar_fractions[species][-10]*(1-0.1), species, text_size = -2,color=color.cmyk.White)
+                    draw_text(g, x_text, y_text, species, text_size = -3, \
+                              color=color.cmyk.White, rotation = angle)
     if i<10:
-        c.writeGSfile("colormap_00"+str(i)+".png",resolution=1000)
+        c.writeGSfile(element_to_plot+'_images/'+"colormap_00"+str(i)+".png",resolution=1000)
     elif i<100:
-        c.writeGSfile("colormap_0"+str(i)+".png",resolution=1000)
+        c.writeGSfile(element_to_plot+'_images/'+"colormap_0"+str(i)+".png",resolution=1000)
     else:
-        c.writeGSfile("colormap_"+str(i)+".png",resolution=1000)
+        c.writeGSfile(element_to_plot+'_images/'+"colormap_"+str(i)+".png",resolution=1000)
 
