@@ -1,0 +1,355 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2014.5.25)  25 JUL 2016 22:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**tmpX06723
+(./tmpX06723.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+)
+*\scrollmode
+
+
+*\raiseerror%
+! Undefined control sequence.
+<*> \raiseerror
+               %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+*\def\PyX{P\kern-.3em\lower.5ex\hbox{Y}\kern-.18em X}%
+
+*\gdef\PyXBoxHAlign{0}%
+
+*\newbox\PyXBox%
+\PyXBox=\box26
+
+*\newbox\PyXBoxHAligned%
+\PyXBoxHAligned=\box27
+
+*\newdimen\PyXDimenHAlignLT%
+\PyXDimenHAlignLT=\dimen102
+
+*\newdimen\PyXDimenHAlignRT%
+\PyXDimenHAlignRT=\dimen103
+
+*\gdef\PyXFlushHAlign{0}%
+
+*\def\PyXragged{%
+
+*\leftskip=0pt plus \PyXFlushHAlign fil%
+
+*\rightskip=0pt plus 1fil%
+
+*\advance\rightskip0pt plus -\PyXFlushHAlign fil%
+
+*\parfillskip=0pt%
+
+*\pretolerance=9999%
+
+*\tolerance=9999%
+
+*\parindent=0pt%
+
+*\hyphenpenalty=9999%
+
+*\exhyphenpenalty=9999}%
+
+*\newbox\PyXBoxVBox%
+\PyXBoxVBox=\box28
+
+*\newdimen\PyXDimenVBox%
+\PyXDimenVBox=\dimen104
+
+*\newbox\PyXBoxVAlign%
+\PyXBoxVAlign=\box29
+
+*\newdimen\PyXDimenVAlign%
+\PyXDimenVAlign=\dimen105
+
+*\newdimen\PyXDimenVShift%
+\PyXDimenVShift=\dimen106
+
+*\long\def\ProcessPyXBox#1#2{%
+
+*\setbox\PyXBox=\hbox{{#1}}%
+
+*\PyXDimenHAlignLT=\PyXBoxHAlign\wd\PyXBox%
+
+*\PyXDimenHAlignRT=\wd\PyXBox%
+
+*\advance\PyXDimenHAlignRT by -\PyXDimenHAlignLT%
+
+*\gdef\PyXBoxHAlign{0}%
+
+*\immediate\write16{PyXBox:page=#2,lt=\the\PyXDimenHAlignLT,rt=\the\PyXDimenHAl
+ignRT,ht=\the\ht\PyXBox,dp=\the\dp\PyXBox:}%
+
+*\setbox\PyXBoxHAligned=\hbox{\kern-\PyXDimenHAlignLT\box\PyXBox}%
+
+*\ht\PyXBoxHAligned0pt%
+
+*{\count0=80\count1=121\count2=88\count3=#2\shipout\box\PyXBoxHAligned}}%
+
+*\def\PyXInput#1{\immediate\write16{PyXInputMarker:executeid=#1:}}%
+
+*\def\PyXMarker#1{\hskip0pt\special{PyX:marker #1}}%%
+
+*\PyXInput{1}%
+PyXInputMarker:executeid=1:
+
+*\makeatletter%
+
+*\let\saveProcessOptions=\ProcessOptions%
+
+*\def\ProcessOptions{%
+
+*\def\Gin@driver{/Users/nespinoza/github/kavli_project/plots/chem_eq/tmpX06723.
+pyx.def}%
+
+*\def\c@lor@namefile{dvipsnam.def}%
+
+*\saveProcessOptions}%
+
+*\makeatother%
+
+*\PyXInput{2}%
+PyXInputMarker:executeid=2:
+
+*\documentclass{article}%
+
+*\PyXInput{3}%
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen107
+)
+PyXInputMarker:executeid=3:
+
+*\usepackage{color}%
+
+*\PyXInput{4}%
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: /Users/nespinoza/github/kavli_project/plots/ch
+em_eq/tmpX06723.pyx.def on input line 137.
+
+(/Users/nespinoza/github/kavli_project/plots/chem_eq/tmpX06723.pyx.def
+File: pyx.def 2006/05/17 driver-dependant file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
+))
+PyXInputMarker:executeid=4:
+
+*\usepackage{wasysym}%
+
+*\PyXInput{5}%
+(/usr/local/texlive/2014/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+PyXInputMarker:executeid=5:
+
+*\begin{document}%
+No file tmpX06723.aux.
+\openout1 = `tmpX06723.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+
+*\PyXInput{6}%
+PyXInputMarker:executeid=6:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{0}}$}}\lower\PyXDimenVShift\box0%
+
+*}{1}%
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 0.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 0.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 0.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+PyXBox:page=1,lt=2.5pt,rt=2.50002pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.1]
+*\PyXInput{7}%
+PyXInputMarker:executeid=7:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{1}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{2}%
+PyXBox:page=2,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.2]
+*\PyXInput{8}%
+PyXInputMarker:executeid=8:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{2}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{3}%
+PyXBox:page=3,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.3]
+*\PyXInput{9}%
+PyXInputMarker:executeid=9:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{3}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{4}%
+PyXBox:page=4,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.4]
+*\PyXInput{10}%
+PyXInputMarker:executeid=10:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{4}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{5}%
+PyXBox:page=5,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.5]
+*\PyXInput{11}%
+PyXInputMarker:executeid=11:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Molar abundance}}\lower\PyXDimenVShift\box0%
+
+*}{6}%
+PyXBox:page=6,lt=37.93063pt,rt=37.93065pt,ht=4.44444pt,dp=2.5pt:
+[80.121.88.6]
+*\PyXInput{12}%
+PyXInputMarker:executeid=12:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.01}$}}\lower\PyXDimenVShift\box0%
+
+*}{7}%
+PyXBox:page=7,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.7]
+*\PyXInput{13}%
+PyXInputMarker:executeid=13:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.02}$}}\lower\PyXDimenVShift\box0%
+
+*}{8}%
+PyXBox:page=8,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.8]
+*\PyXInput{14}%
+PyXInputMarker:executeid=14:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.05}$}}\lower\PyXDimenVShift\box0%
+
+*}{9}%
+PyXBox:page=9,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.9]
+*\PyXInput{15}%
+PyXInputMarker:executeid=15:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.1}$}}\lower\PyXDimenVShift\box0%
+
+*}{10}%
+PyXBox:page=10,lt=6.3889pt,rt=6.38892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.10]
+*\PyXInput{16}%
+PyXInputMarker:executeid=16:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Radius (AU)}}\lower\PyXDimenVShift\box0%
+
+*}{11}%
+PyXBox:page=11,lt=28.01393pt,rt=28.01395pt,ht=5.0pt,dp=5.0pt:
+[80.121.88.11]
+*\PyXInput{17}%
+PyXInputMarker:executeid=17:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.01}$}}\lower\PyXDimenVShift\box0%
+
+*}{12}%
+PyXBox:page=12,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.12]
+*\PyXInput{18}%
+PyXInputMarker:executeid=18:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.1}$}}\lower\PyXDimenVShift\box0%
+
+*}{13}%
+PyXBox:page=13,lt=6.3889pt,rt=6.38892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.13]
+*\PyXInput{19}%
+PyXInputMarker:executeid=19:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Radius (AU)}}\lower\PyXDimenVShift\box0%
+
+*}{14}%
+PyXBox:page=14,lt=28.01393pt,rt=28.01395pt,ht=5.0pt,dp=5.0pt:
+[80.121.88.14]
+*\PyXInput{20}%
+PyXInputMarker:executeid=20:
+
+*\end{document}%
+(./tmpX06723.aux) 
+Here is how much of TeX's memory you used:
+ 668 strings out of 493118
+ 8433 string characters out of 6135459
+ 55474 words of memory out of 5000000
+ 4196 multiletter control sequences out of 15000+600000
+ 4281 words of font info for 17 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,5n,19p,225b,78s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on tmpX06723.dvi (14 pages, 1312 bytes).
