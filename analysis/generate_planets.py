@@ -101,7 +101,9 @@ times_el = np.array(times_el)
 idx = np.argsort(times_el)
 times_el = times_el[idx]
 # Now load planet:
-t_acc,a_acc,Mg_acc,Mt_acc,a_width_acc = utils.get_accretion_data('planets/accretion/planet01AU.sal') 
+filename_input = 'planets/accretion/planet01AU.sal'
+#filename_input = 'planets/accretion/planet005AU.sal'
+t_acc,a_acc,Mg_acc,Mt_acc,a_width_acc = utils.get_accretion_data(filename_input) 
 # Transform times to Myr, sort:
 t_acc = t_acc/1e6
 idx = np.argsort(t_acc)
@@ -262,6 +264,25 @@ planet_mass[element] = {}
 print '    X: ',(planet_mass['H(g)'] + planet_mass['H(s)'])/(envelope_mass)
 print '    Y: ',(planet_mass['He(g)']+planet_mass['He(s)'])/(envelope_mass)
 print '    Z: ',ztot/envelope_mass,'(',(ztot/envelope_mass)/0.0141,'x solar)'
+# Print final mixing ratios to file:
+vec = filename_input.split('/')
+if len(vec) == 1:
+    out_filename = vec
+else:
+    out_filename = vec[-1]
+gen = False
+if not os.path.exists('mixing_ratios_ssn.sal'):
+    gen = True
+    fout2 = open('mixing_ratios_ssn.sal','w')
+fout = open('mixing_ratios_'+out_filename,'w')
+for element in ['H','He','Ti','V','O','C','N','S','Na','K','Fe']:
+    exec 'element_mass = pt.'+element+'.mass*amu'
+    fout.write(element+' '+str(planet_mass[element]*Mearth/element_mass)+'\n')
+    if gen:
+        fout2.write(element+' '+str(abundances[element])+'\n')
+fout.close()
+if gen:
+    fout2.close()
 print '\n Total:'
 print '\n ------'
 print '  Total metallicity of the planet (core + envelope):'
