@@ -105,7 +105,9 @@ def howmany(element,species):
         
     l = len(element)
     ls = len(species)
-    if ls == l:
+    if species.find(element) == -1:
+        return 0.
+    elif ls == l:
         return 1.
     else:
         for i in range(ls):

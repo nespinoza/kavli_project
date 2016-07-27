@@ -97,8 +97,11 @@ name = abundances.keys()
 radius = elemental_abundances['r']
 times_el = elemental_abundances.keys()
 times_el.remove('r')
+times_el = np.array(times_el)
+idx = np.argsort(times_el)
+times_el = times_el[idx]
 # Now load planet:
-t_acc,a_acc,Mg_acc,Mt_acc,a_width_acc = utils.get_accretion_data('planets/accretion/planet005AU.sal') 
+t_acc,a_acc,Mg_acc,Mt_acc,a_width_acc = utils.get_accretion_data('planets/accretion/planet01AU.sal') 
 # Transform times to Myr, sort:
 t_acc = t_acc/1e6
 idx = np.argsort(t_acc)
@@ -146,12 +149,21 @@ for i in idx:
             # mean gas and solid abundance of element (which is normalized to the 
             # total number of H atoms) inside 10R_hill of the planet...
             for j in range(len(times_el)):
-                X_g[j] = np.mean(elemental_abundances[times_el[j]][element+'(g)'][idx_radius])
-                X_s[j] = np.mean(elemental_abundances[times_el[j]][element+'(s)'][idx_radius])
+                l = len(idx_radius)
+                X_g[j] = elemental_abundances[times_el[j]][element+'(g)'][idx_radius[l/2]]#np.mean(elemental_abundances[times_el[j]][element+'(g)'][idx_radius])
+                X_s[j] = elemental_abundances[times_el[j]][element+'(s)'][idx_radius[l/2]]#np.mean(elemental_abundances[times_el[j]][element+'(s)'][idx_radius])
             # Use those abundances with the times at which those abundances occur to create a 
             # function that interpolates the abundances at any time:
             ng = interpolate.interp1d(times_el,X_g)
             ns = interpolate.interp1d(times_el,X_s)
+            #if element == 'Ti':
+            #    print radius[idx_radius]
+            #    from pylab import *
+            #    print np.min(times_el),np.max(times_el)
+            #    plot(times_el,X_s,'-')
+            #    plot(times_el,ns(times_el),'--')
+            #    show()
+            #    sys.exit()
             # Get interpolated abundances at the current time:
             c_abundances[element+'(g)'] = ng(c_t)
             c_abundances[element+'(s)'] = ns(c_t)
@@ -216,8 +228,9 @@ planet_mass[element] = {}
 #print '    X: ',(planet_mass['H(g)'] + planet_mass['H(s)'])/(envelope_mass)
 #print '    Y: ',(planet_mass['He(g)']+planet_mass['He(s)'])/(envelope_mass)
 for element in abundances.keys():
+    planet_mass[element] = planet_mass[element+'(g)'] + planet_mass[element+'(s)']
     if element != 'H' and element != 'He':
-        planet_mass[element] = planet_mass[element+'(g)'] + planet_mass[element+'(s)']
+        #planet_mass[element] = planet_mass[element+'(g)'] + planet_mass[element+'(s)']
         ztot = ztot + planet_mass[element]
         ztot_gas = ztot_gas + planet_mass[element+'(g)']
         ztot_solids = ztot_solids + planet_mass[element+'(s)']
@@ -234,11 +247,15 @@ print '  \t Mass composition:'
 print '  \t X: ',planet_mass['H(g)']/planet_mass_gas
 print '  \t Y: ',planet_mass['He(g)']/planet_mass_gas
 print '  \t Z: ',ztot_gas/planet_mass_gas
+solar_ratio = (abundances['Na']/abundances['K'])
+print '  \t Na/K: ',((planet_mass['Na(g)']/pt.Na.mass)/(planet_mass['K(g)']/pt.K.mass))/solar_ratio
 print '  Total solid mass:',planet_mass_solids,'Mearth\n'
 print '  \t Mass composition:'
 print '  \t X: ',planet_mass['H(s)']/planet_mass_solids
 print '  \t Y: ',planet_mass['He(s)']/planet_mass_solids
 print '  \t Z: ',ztot_solids/planet_mass_solids
+solar_ratio = (abundances['Na']/abundances['K'])
+print '  \t Na/K: ',((planet_mass['Na(s)']/pt.Na.mass)/(planet_mass['K(s)']/pt.K.mass))/solar_ratio
 envelope_mass = planet_mass_gas + planet_mass_solids
 print '  Total mass composition of the planetary envelope:'
 planet_mass[element] = {}
@@ -248,6 +265,10 @@ print '    Z: ',ztot/envelope_mass,'(',(ztot/envelope_mass)/0.0141,'x solar)'
 print '\n Total:'
 print '\n ------'
 print '  Total metallicity of the planet (core + envelope):'
+print '            Na accreted in gas:    ',planet_mass['Na(g)']
+print '            Na accreted in solids: ',planet_mass['Na(s)']
+print '            K accreted in gas:     ',planet_mass['K(g)']
+print '            K accreted in solids:  ',planet_mass['K(s)']
 Zenv_final = ztot/envelope_mass
 epsilon = core_mass/envelope_mass
 Zfin = (Zenv_final + epsilon)/(1.+epsilon)

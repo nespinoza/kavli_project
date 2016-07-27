@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import periodictable as pt
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 import numpy as np
@@ -7,7 +8,44 @@ import pickle
 
 radius,times,results = utils.get_data()
 Z,name,N = utils.read_abundances('ssabundances_4Gyr.dat')
+##### Sanity check #####
+#for i in range(len(times)):
+#  resulting_abundances = results[times[i]]
+#  in_element = {}
+#  out_element = {}
+#  counter = 0
+#  tot = 0.0
+#  tot_abundances = 0.0
+#  all_s = 0.0
+#  idx_radius = 0
+#  for species in resulting_abundances.keys():
+#    all_s = all_s + resulting_abundances[species][idx_radius]
+#    for element in ['H','He','C','N','O','Na','Mg','AL','Si','S','K','Ca','Ti','V','Fe']:
+#        if counter == 0:
+#            idx = np.where(name == element)[0]
+#            tot_abundances = tot_abundances + N[idx]
+#            in_element[element] = N[idx]
+#            out_element[element] = 0.0
+#        fac = utils.howmany(element,species)
+#        out_element[element] = out_element[element] + fac*resulting_abundances[species][idx_radius]
+#        tot = tot+fac*resulting_abundances[species][idx_radius]
+#        if element == 'Fe':
+#            print species,resulting_abundances[species][idx_radius],'(',fac,')'
+#    counter = 1
+#  print 'all_s:'
+#  print all_s
+#  print 'tot:'
+#  print tot
+#  totcheck = 0.0
+#  for element in ['H','He','C','N','O','Na','Mg','AL','Si','S','K','Ca','Ti','V','Fe']:
+#    totcheck = totcheck + out_element[element]
+#    print element+' in:  ',in_element[element]/tot_abundances
+#    print element+' out: ',out_element[element]/tot
+#  break
+#sys.exit()
+########################
 abundances = {}
+            
 for i in range(len(name)):
     abundances[name[i]] = N[i]
 Habundance = abundances['H']

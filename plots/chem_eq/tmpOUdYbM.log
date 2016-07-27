@@ -1,0 +1,1055 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2014.5.25)  26 JUL 2016 00:26
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**tmpOUdYbM
+(./tmpOUdYbM.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+)
+*\scrollmode
+
+
+*\raiseerror%
+! Undefined control sequence.
+<*> \raiseerror
+               %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+*\def\PyX{P\kern-.3em\lower.5ex\hbox{Y}\kern-.18em X}%
+
+*\gdef\PyXBoxHAlign{0}%
+
+*\newbox\PyXBox%
+\PyXBox=\box26
+
+*\newbox\PyXBoxHAligned%
+\PyXBoxHAligned=\box27
+
+*\newdimen\PyXDimenHAlignLT%
+\PyXDimenHAlignLT=\dimen102
+
+*\newdimen\PyXDimenHAlignRT%
+\PyXDimenHAlignRT=\dimen103
+
+*\gdef\PyXFlushHAlign{0}%
+
+*\def\PyXragged{%
+
+*\leftskip=0pt plus \PyXFlushHAlign fil%
+
+*\rightskip=0pt plus 1fil%
+
+*\advance\rightskip0pt plus -\PyXFlushHAlign fil%
+
+*\parfillskip=0pt%
+
+*\pretolerance=9999%
+
+*\tolerance=9999%
+
+*\parindent=0pt%
+
+*\hyphenpenalty=9999%
+
+*\exhyphenpenalty=9999}%
+
+*\newbox\PyXBoxVBox%
+\PyXBoxVBox=\box28
+
+*\newdimen\PyXDimenVBox%
+\PyXDimenVBox=\dimen104
+
+*\newbox\PyXBoxVAlign%
+\PyXBoxVAlign=\box29
+
+*\newdimen\PyXDimenVAlign%
+\PyXDimenVAlign=\dimen105
+
+*\newdimen\PyXDimenVShift%
+\PyXDimenVShift=\dimen106
+
+*\long\def\ProcessPyXBox#1#2{%
+
+*\setbox\PyXBox=\hbox{{#1}}%
+
+*\PyXDimenHAlignLT=\PyXBoxHAlign\wd\PyXBox%
+
+*\PyXDimenHAlignRT=\wd\PyXBox%
+
+*\advance\PyXDimenHAlignRT by -\PyXDimenHAlignLT%
+
+*\gdef\PyXBoxHAlign{0}%
+
+*\immediate\write16{PyXBox:page=#2,lt=\the\PyXDimenHAlignLT,rt=\the\PyXDimenHAl
+ignRT,ht=\the\ht\PyXBox,dp=\the\dp\PyXBox:}%
+
+*\setbox\PyXBoxHAligned=\hbox{\kern-\PyXDimenHAlignLT\box\PyXBox}%
+
+*\ht\PyXBoxHAligned0pt%
+
+*{\count0=80\count1=121\count2=88\count3=#2\shipout\box\PyXBoxHAligned}}%
+
+*\def\PyXInput#1{\immediate\write16{PyXInputMarker:executeid=#1:}}%
+
+*\def\PyXMarker#1{\hskip0pt\special{PyX:marker #1}}%%
+
+*\PyXInput{1}%
+PyXInputMarker:executeid=1:
+
+*\makeatletter%
+
+*\let\saveProcessOptions=\ProcessOptions%
+
+*\def\ProcessOptions{%
+
+*\def\Gin@driver{/Users/nespinoza/github/kavli_project/plots/chem_eq/tmpOUdYbM.
+pyx.def}%
+
+*\def\c@lor@namefile{dvipsnam.def}%
+
+*\saveProcessOptions}%
+
+*\makeatother%
+
+*\PyXInput{2}%
+PyXInputMarker:executeid=2:
+
+*\documentclass{article}%
+
+*\PyXInput{3}%
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen107
+)
+PyXInputMarker:executeid=3:
+
+*\usepackage{color}%
+
+*\PyXInput{4}%
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: /Users/nespinoza/github/kavli_project/plots/ch
+em_eq/tmpOUdYbM.pyx.def on input line 137.
+
+(/Users/nespinoza/github/kavli_project/plots/chem_eq/tmpOUdYbM.pyx.def
+File: pyx.def 2006/05/17 driver-dependant file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
+))
+PyXInputMarker:executeid=4:
+
+*\usepackage{wasysym}%
+
+*\PyXInput{5}%
+(/usr/local/texlive/2014/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+PyXInputMarker:executeid=5:
+
+*\begin{document}%
+No file tmpOUdYbM.aux.
+\openout1 = `tmpOUdYbM.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+
+*\PyXInput{6}%
+PyXInputMarker:executeid=6:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.01}$}}\lower\PyXDimenVShift\box0%
+
+*}{1}%
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 0.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 0.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 0.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+PyXBox:page=1,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.1]
+*\PyXInput{7}%
+PyXInputMarker:executeid=7:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.02}$}}\lower\PyXDimenVShift\box0%
+
+*}{2}%
+PyXBox:page=2,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.2]
+*\PyXInput{8}%
+PyXInputMarker:executeid=8:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.05}$}}\lower\PyXDimenVShift\box0%
+
+*}{3}%
+PyXBox:page=3,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.3]
+*\PyXInput{9}%
+PyXInputMarker:executeid=9:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.1}$}}\lower\PyXDimenVShift\box0%
+
+*}{4}%
+PyXBox:page=4,lt=6.3889pt,rt=6.38892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.4]
+*\PyXInput{10}%
+PyXInputMarker:executeid=10:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Radius (AU)}}\lower\PyXDimenVShift\box0%
+
+*}{5}%
+PyXBox:page=5,lt=28.01393pt,rt=28.01395pt,ht=5.0pt,dp=5.0pt:
+[80.121.88.5]
+*\PyXInput{11}%
+PyXInputMarker:executeid=11:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.01}$}}\lower\PyXDimenVShift\box0%
+
+*}{6}%
+PyXBox:page=6,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.6]
+*\PyXInput{12}%
+PyXInputMarker:executeid=12:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.1}$}}\lower\PyXDimenVShift\box0%
+
+*}{7}%
+PyXBox:page=7,lt=6.3889pt,rt=6.38892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.7]
+*\PyXInput{13}%
+PyXInputMarker:executeid=13:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Radius (AU)}}\lower\PyXDimenVShift\box0%
+
+*}{8}%
+PyXBox:page=8,lt=28.01393pt,rt=28.01395pt,ht=5.0pt,dp=5.0pt:
+[80.121.88.8]
+*\PyXInput{14}%
+PyXInputMarker:executeid=14:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{0}}$}}\lower\PyXDimenVShift\box0%
+
+*}{9}%
+PyXBox:page=9,lt=2.5pt,rt=2.50002pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.9]
+*\PyXInput{15}%
+PyXInputMarker:executeid=15:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{1}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{10}%
+PyXBox:page=10,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.10]
+*\PyXInput{16}%
+PyXInputMarker:executeid=16:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{2}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{11}%
+PyXBox:page=11,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.11]
+*\PyXInput{17}%
+PyXInputMarker:executeid=17:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{3}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{12}%
+PyXBox:page=12,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.12]
+*\PyXInput{18}%
+PyXInputMarker:executeid=18:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{4}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{13}%
+PyXBox:page=13,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.13]
+*\PyXInput{19}%
+PyXInputMarker:executeid=19:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Molar abundance}}\lower\PyXDimenVShift\box0%
+
+*}{14}%
+PyXBox:page=14,lt=37.93063pt,rt=37.93065pt,ht=4.44444pt,dp=2.5pt:
+[80.121.88.14]
+*\PyXInput{20}%
+PyXInputMarker:executeid=20:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{15}%
+PyXBox:page=15,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.15]
+*\PyXInput{21}%
+PyXInputMarker:executeid=21:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.75}$}}\lower\PyXDimenVShift\box0%
+
+*}{16}%
+PyXBox:page=16,lt=12.77782pt,rt=12.77782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.16]
+*\PyXInput{22}%
+PyXInputMarker:executeid=22:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.5}$}}\lower\PyXDimenVShift\box0%
+
+*}{17}%
+PyXBox:page=17,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.17]
+*\PyXInput{23}%
+PyXInputMarker:executeid=23:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.25}$}}\lower\PyXDimenVShift\box0%
+
+*}{18}%
+PyXBox:page=18,lt=12.77782pt,rt=12.77782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.18]
+*\PyXInput{24}%
+PyXInputMarker:executeid=24:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{19}%
+PyXBox:page=19,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.19]
+*\PyXInput{25}%
+PyXInputMarker:executeid=25:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{20}%
+PyXBox:page=20,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.20]
+*\PyXInput{26}%
+PyXInputMarker:executeid=26:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.8}$}}\lower\PyXDimenVShift\box0%
+
+*}{21}%
+PyXBox:page=21,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.21]
+*\PyXInput{27}%
+PyXInputMarker:executeid=27:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.6}$}}\lower\PyXDimenVShift\box0%
+
+*}{22}%
+PyXBox:page=22,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.22]
+*\PyXInput{28}%
+PyXInputMarker:executeid=28:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.4}$}}\lower\PyXDimenVShift\box0%
+
+*}{23}%
+PyXBox:page=23,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.23]
+*\PyXInput{29}%
+PyXInputMarker:executeid=29:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.2}$}}\lower\PyXDimenVShift\box0%
+
+*}{24}%
+PyXBox:page=24,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.24]
+*\PyXInput{30}%
+PyXInputMarker:executeid=30:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{25}%
+PyXBox:page=25,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.25]
+*\PyXInput{31}%
+PyXInputMarker:executeid=31:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{26}%
+PyXBox:page=26,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.26]
+*\PyXInput{32}%
+PyXInputMarker:executeid=32:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.5}$}}\lower\PyXDimenVShift\box0%
+
+*}{27}%
+PyXBox:page=27,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.27]
+*\PyXInput{33}%
+PyXInputMarker:executeid=33:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{28}%
+PyXBox:page=28,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.28]
+*\PyXInput{34}%
+PyXInputMarker:executeid=34:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{29}%
+PyXBox:page=29,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.29]
+*\PyXInput{35}%
+PyXInputMarker:executeid=35:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{30}%
+PyXBox:page=30,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.30]
+*\PyXInput{36}%
+PyXInputMarker:executeid=36:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{31}%
+PyXBox:page=31,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.31]
+*\PyXInput{37}%
+PyXInputMarker:executeid=37:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{32}%
+PyXBox:page=32,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.32]
+*\PyXInput{38}%
+PyXInputMarker:executeid=38:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{33}%
+PyXBox:page=33,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.33]
+*\PyXInput{39}%
+PyXInputMarker:executeid=39:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{34}%
+PyXBox:page=34,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.34]
+*\PyXInput{40}%
+PyXInputMarker:executeid=40:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{35}%
+PyXBox:page=35,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.35]
+*\PyXInput{41}%
+PyXInputMarker:executeid=41:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{36}%
+PyXBox:page=36,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.36]
+*\PyXInput{42}%
+PyXInputMarker:executeid=42:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}500}}\lower\PyXDimenVShift\box0%
+
+*}{37}%
+PyXBox:page=37,lt=7.50002pt,rt=7.50003pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.37]
+*\PyXInput{43}%
+PyXInputMarker:executeid=43:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}1200}}\lower\PyXDimenVShift\box0%
+
+*}{38}%
+PyXBox:page=38,lt=10.00003pt,rt=10.00003pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.38]
+*\PyXInput{44}%
+PyXInputMarker:executeid=44:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}1900}}\lower\PyXDimenVShift\box0%
+
+*}{39}%
+PyXBox:page=39,lt=10.00003pt,rt=10.00003pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.39]
+*\PyXInput{45}%
+PyXInputMarker:executeid=45:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}2600}}\lower\PyXDimenVShift\box0%
+
+*}{40}%
+PyXBox:page=40,lt=10.00003pt,rt=10.00003pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.40]
+*\PyXInput{46}%
+PyXInputMarker:executeid=46:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$T_\textnormal{disk}$}}\lower\PyXDimenVShift\box0%
+
+*}{41}%
+PyXBox:page=41,lt=11.94968pt,rt=11.94968pt,ht=4.33331pt,dp=6.00002pt:
+[80.121.88.41]
+*\PyXInput{47}%
+PyXInputMarker:executeid=47:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.01}$}}\lower\PyXDimenVShift\box0%
+
+*}{42}%
+PyXBox:page=42,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.42]
+*\PyXInput{48}%
+PyXInputMarker:executeid=48:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.02}$}}\lower\PyXDimenVShift\box0%
+
+*}{43}%
+PyXBox:page=43,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.43]
+*\PyXInput{49}%
+PyXInputMarker:executeid=49:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.05}$}}\lower\PyXDimenVShift\box0%
+
+*}{44}%
+PyXBox:page=44,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.44]
+*\PyXInput{50}%
+PyXInputMarker:executeid=50:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.1}$}}\lower\PyXDimenVShift\box0%
+
+*}{45}%
+PyXBox:page=45,lt=6.3889pt,rt=6.38892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.45]
+*\PyXInput{51}%
+PyXInputMarker:executeid=51:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Radius (AU)}}\lower\PyXDimenVShift\box0%
+
+*}{46}%
+PyXBox:page=46,lt=28.01393pt,rt=28.01395pt,ht=5.0pt,dp=5.0pt:
+[80.121.88.46]
+*\PyXInput{52}%
+PyXInputMarker:executeid=52:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.01}$}}\lower\PyXDimenVShift\box0%
+
+*}{47}%
+PyXBox:page=47,lt=8.88892pt,rt=8.88892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.47]
+*\PyXInput{53}%
+PyXInputMarker:executeid=53:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{0.1}$}}\lower\PyXDimenVShift\box0%
+
+*}{48}%
+PyXBox:page=48,lt=6.3889pt,rt=6.38892pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.48]
+*\PyXInput{54}%
+PyXInputMarker:executeid=54:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Radius (AU)}}\lower\PyXDimenVShift\box0%
+
+*}{49}%
+PyXBox:page=49,lt=28.01393pt,rt=28.01395pt,ht=5.0pt,dp=5.0pt:
+[80.121.88.49]
+*\PyXInput{55}%
+PyXInputMarker:executeid=55:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{0}}$}}\lower\PyXDimenVShift\box0%
+
+*}{50}%
+PyXBox:page=50,lt=2.5pt,rt=2.50002pt,ht=3.94444pt,dp=2.5pt:
+[80.121.88.50]
+*\PyXInput{56}%
+PyXInputMarker:executeid=56:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{1}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{51}%
+PyXBox:page=51,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.51]
+*\PyXInput{57}%
+PyXInputMarker:executeid=57:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{2}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{52}%
+PyXBox:page=52,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.52]
+*\PyXInput{58}%
+PyXInputMarker:executeid=58:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{3}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{53}%
+PyXBox:page=53,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.53]
+*\PyXInput{59}%
+PyXInputMarker:executeid=59:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{{{4}\cdot10^{-6}}}$}}\lower\PyXDimenVShift\box0%
+
+*}{54}%
+PyXBox:page=54,lt=16.47916pt,rt=16.47916pt,ht=6.14003pt,dp=2.5pt:
+[80.121.88.54]
+*\PyXInput{60}%
+PyXInputMarker:executeid=60:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}Molar abundance}}\lower\PyXDimenVShift\box0%
+
+*}{55}%
+PyXBox:page=55,lt=37.93063pt,rt=37.93065pt,ht=4.44444pt,dp=2.5pt:
+[80.121.88.55]
+*\PyXInput{61}%
+PyXInputMarker:executeid=61:
+
+*\ProcessPyXBox{\Large{}\setbox0\hbox{{0}}\PyXDimenVShift=0.50000\ht0\setbox0\h
+box{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragged{} 5.06 
+Myr disk}}\lower\PyXDimenVShift\box0%
+
+*}{56}%
+PyXBox:page=56,lt=44.88193pt,rt=44.88194pt,ht=5.36pt,dp=7.43997pt:
+[80.121.88.56]
+*\PyXInput{62}%
+PyXInputMarker:executeid=62:
+
+*\ProcessPyXBox{\scriptsize{}\setbox0\hbox{{0}}\PyXDimenVShift=0.50000\ht0\setb
+ox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragged{}\
+textcolor[cmyk]{0,0,0,0}{NaALSi3O8(s)}}}\lower\PyXDimenVShift\box0%
+
+*}{57}%
+PyXBox:page=57,lt=25.47304pt,rt=25.47305pt,ht=2.99445pt,dp=4.00555pt:
+[80.121.88.57]
+*\PyXInput{63}%
+PyXInputMarker:executeid=63:
+
+*\ProcessPyXBox{\scriptsize{}\setbox0\hbox{{0}}\PyXDimenVShift=0.50000\ht0\setb
+ox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragged{}\
+textcolor[cmyk]{0,0,0,0}{}}}\lower\PyXDimenVShift\box0%
+
+*}{58}%
+PyXBox:page=58,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.25555pt:
+[80.121.88.58]
+*\PyXInput{64}%
+PyXInputMarker:executeid=64:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{59}%
+PyXBox:page=59,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.59]
+*\PyXInput{65}%
+PyXInputMarker:executeid=65:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.75}$}}\lower\PyXDimenVShift\box0%
+
+*}{60}%
+PyXBox:page=60,lt=12.77782pt,rt=12.77782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.60]
+*\PyXInput{66}%
+PyXInputMarker:executeid=66:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.5}$}}\lower\PyXDimenVShift\box0%
+
+*}{61}%
+PyXBox:page=61,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.61]
+*\PyXInput{67}%
+PyXInputMarker:executeid=67:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.25}$}}\lower\PyXDimenVShift\box0%
+
+*}{62}%
+PyXBox:page=62,lt=12.77782pt,rt=12.77782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.62]
+*\PyXInput{68}%
+PyXInputMarker:executeid=68:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{63}%
+PyXBox:page=63,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.63]
+*\PyXInput{69}%
+PyXInputMarker:executeid=69:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{64}%
+PyXBox:page=64,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.64]
+*\PyXInput{70}%
+PyXInputMarker:executeid=70:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.8}$}}\lower\PyXDimenVShift\box0%
+
+*}{65}%
+PyXBox:page=65,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.65]
+*\PyXInput{71}%
+PyXInputMarker:executeid=71:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.6}$}}\lower\PyXDimenVShift\box0%
+
+*}{66}%
+PyXBox:page=66,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.66]
+*\PyXInput{72}%
+PyXInputMarker:executeid=72:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.4}$}}\lower\PyXDimenVShift\box0%
+
+*}{67}%
+PyXBox:page=67,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.67]
+*\PyXInput{73}%
+PyXInputMarker:executeid=73:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.2}$}}\lower\PyXDimenVShift\box0%
+
+*}{68}%
+PyXBox:page=68,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.68]
+*\PyXInput{74}%
+PyXInputMarker:executeid=74:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{69}%
+PyXBox:page=69,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.69]
+*\PyXInput{75}%
+PyXInputMarker:executeid=75:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{70}%
+PyXBox:page=70,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.70]
+*\PyXInput{76}%
+PyXInputMarker:executeid=76:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}$\displaystyle{-1.5}$}}\lower\PyXDimenVShift\box0%
+
+*}{71}%
+PyXBox:page=71,lt=10.2778pt,rt=10.27782pt,ht=3.94444pt,dp=3.33333pt:
+[80.121.88.71]
+*\PyXInput{77}%
+PyXInputMarker:executeid=77:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{72}%
+PyXBox:page=72,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.72]
+*\PyXInput{78}%
+PyXInputMarker:executeid=78:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{73}%
+PyXBox:page=73,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.73]
+*\PyXInput{79}%
+PyXInputMarker:executeid=79:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{74}%
+PyXBox:page=74,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.74]
+*\PyXInput{80}%
+PyXInputMarker:executeid=80:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{75}%
+PyXBox:page=75,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.75]
+*\PyXInput{81}%
+PyXInputMarker:executeid=81:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{76}%
+PyXBox:page=76,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.76]
+*\PyXInput{82}%
+PyXInputMarker:executeid=82:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{77}%
+PyXBox:page=77,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.77]
+*\PyXInput{83}%
+PyXInputMarker:executeid=83:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{78}%
+PyXBox:page=78,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.78]
+*\PyXInput{84}%
+PyXInputMarker:executeid=84:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{79}%
+PyXBox:page=79,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.79]
+*\PyXInput{85}%
+PyXInputMarker:executeid=85:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{80}%
+PyXBox:page=80,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.80]
+*\PyXInput{86}%
+PyXInputMarker:executeid=86:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{81}%
+PyXBox:page=81,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.81]
+*\PyXInput{87}%
+PyXInputMarker:executeid=87:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{82}%
+PyXBox:page=82,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.82]
+*\PyXInput{88}%
+PyXInputMarker:executeid=88:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{83}%
+PyXBox:page=83,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.83]
+*\PyXInput{89}%
+PyXInputMarker:executeid=89:
+
+*\ProcessPyXBox{\setbox0\hbox{$\vcenter{\vrule width0pt}$}\PyXDimenVShift=\ht0\
+setbox0\hbox{{\gdef\PyXBoxHAlign{0.50000}\gdef\PyXFlushHAlign{0.50000}\PyXragge
+d{}}}\lower\PyXDimenVShift\box0%
+
+*}{84}%
+PyXBox:page=84,lt=0.0pt,rt=0.0pt,ht=0.0pt,dp=2.5pt:
+[80.121.88.84]
+*\PyXInput{90}%
+PyXInputMarker:executeid=90:
+
+*\end{document}%
+(./tmpOUdYbM.aux) 
+Here is how much of TeX's memory you used:
+ 670 strings out of 493118
+ 8454 string characters out of 6135459
+ 55474 words of memory out of 5000000
+ 4197 multiletter control sequences out of 15000+600000
+ 4579 words of font info for 18 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,5n,19p,226b,78s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on tmpOUdYbM.dvi (84 pages, 5548 bytes).

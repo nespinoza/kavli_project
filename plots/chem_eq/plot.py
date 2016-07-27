@@ -52,7 +52,7 @@ def emulate_colorbar_vertical(g,teff,half_val,m,n,tick_range = None):
 
     # Now a true y-axis with values I want to show:
     if tick_range is None:
-        tick_range = [500,1200,1900,2600,3300]
+        tick_range = [500,1000,1500,2000,2500]
         value_range = range(len(tick_range)-1)
     paint_tick_range = np.linspace(np.min(teff),np.max(teff),100)
     paint_value_range = np.double(np.arange(len(paint_tick_range)))
@@ -167,10 +167,10 @@ legend_pos = 'tl'
 xaxis = r'Radius (AU)'
 yaxis = r'Molar abundance'
 
-element_to_plot = 'Ti'
+element_to_plot = 'C'
 counter = 0
 min_val = 400.
-max_val = 4200.
+max_val = 2500.
 half_val = min_val + ((max_val - min_val)/2.)
 m = 1./(max_val-min_val)
 n = -min_val*m
@@ -204,7 +204,10 @@ for i in range(len(times)):
     # Generate color map:
     T,P,Sigma = disk_models.ChambersModel(radii,times[i]*Myr)
     for kk in range(len(T)-1):
-        the_color = get_color(T,kk,half_val,m,n)
+        if T[kk]>max_val:
+            the_color = get_color([max_val],0,half_val,m,n)
+        else:
+            the_color = get_color(T,kk,half_val,m,n)
         delta_r = (radii[kk+1]-radii[kk])
         draw_rectangular_band(g, radii[kk], 0., delta_r*(8./7.), max_y, the_color)
     # Redraw plot to put axes on top of bar borders:
